@@ -24,21 +24,25 @@ const features = [
 
 
 const handleDownload = () => {
-  var apkUrl = 'http://api.rcfan.cn/download/latest/';
+  const ua = navigator.userAgent.toLowerCase();
 
-  // 创建隐藏的a标签来触发下载
-  var link = document.createElement('a');
-  link.href = apkUrl;
-  link.download = 'app-qmmw.apk'; // 指定下载的文件名
-  document.body.appendChild(link);
-  link.click();
+  const isIOS = /iphone|ipad|ipod/.test(ua);
 
-  // 移除a标签
-  document.body.removeChild(link);
+  if (isIOS) {
+        window.location.href = 'https://apps.apple.com/cn/app/%E5%85%A8%E6%B0%91%E6%A8%A1%E7%8E%A9/id6746377602';
+  } else {
+    var apkUrl = 'http://api.rcfan.cn/download/latest/';
+
+    var link = document.createElement('a');
+    link.href = apkUrl;
+    link.download = 'app-qmmw.apk'; // 指定下载的文件名
+    document.body.appendChild(link);
+    link.click();
+  
+    // 移除a标签
+    document.body.removeChild(link);
+  }
 }
-
-
-
 
 </script>
 
