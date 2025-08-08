@@ -3,41 +3,48 @@ name: Build and Release Vue Site
 on:
   push:
     tags:
-      - 'v*' # 当推送v开头的标签时触发（如v1.0.0）
+      - 'v*'
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 关键权限
+    
     steps:
-      # 1. 检出代码
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 设置Node.js环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 使用你项目所需的Node版本
+          node-version: '20'
           cache: 'npm'
 
-      # 3. 安装依赖并构建
       - name: Install and Build
         run: |
           npm install
-          npm run build # 默认生成dist目录
+          npm run build
 
-      # 4. 创建Release并上传构建产物
+      - name: Verify build output
+        run: |
+          ls -R dist/
+          [ -d "dist" ] || exit 1
+
+      - name: Zip artifacts
+        run: |
+          cd dist && zip -r ../site.zip ./*
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dist/** # 上传整个dist目录
-          tag_name: ${{ github.ref_name }} # 使用触发工作流的tag
+            site.zip  # 上传压缩包
+            # dist/*   # 也可直接上传未压缩的文件
+          tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           body: |
-            Vue Site Build - ${{ github.ref_name }}
-            Build Date: ${{ github.event.head_commit.timestamp }}
-          draft: false
-          prerelease: false
+            Auto-generated release for ${{ github.ref_name }}
+            Build date: ${{ github.event.head_commit.timestamp }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 自动使用GitHub token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
