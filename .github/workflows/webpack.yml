@@ -3,29 +3,36 @@ name: Build and Release Vue Site
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*'  # 自动监听 tag 推送
+  workflow_dispatch:  # 添加手动触发选项
+    inputs:
+      tag_name:
+        description: '要发布的 Tag 名称（如 v1.0.0）'
+        required: true
+        type: string
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 关键权限
-    
+      contents: write
     steps:
-      - name: Checkout
+      - name: Checkout specific tag  # 关键修改：检出指定 tag
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag_name || github.ref_name }}  # 优先使用手动输入的 tag
 
+      # 后续步骤保持不变...
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Install and Build
         run: |
           npm install
           npm run build
-
+      
       - name: Verify build output
         run: |
           ls -R dist/
@@ -38,10 +45,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            site.zip  # 上传压缩包
-            # dist/*   # 也可直接上传未压缩的文件
-          tag_name: ${{ github.ref_name }}
+          files: 'dist/**'
+          tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}  # 动态使用 tag
           name: Release ${{ github.ref_name }}
           body: |
             Auto-generated release for ${{ github.ref_name }}
