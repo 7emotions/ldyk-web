@@ -47,7 +47,7 @@ jobs:
         with:
           files: 'dist/**'
           tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}  # 动态使用 tag
-          name: Release ${{ github.ref_name }}
+          name: Release ${{ github.event.inputs.tag_name || github.ref_name }}
           body: |
             Auto-generated release for ${{ github.ref_name }}
             Build date: ${{ github.event.head_commit.timestamp }}
