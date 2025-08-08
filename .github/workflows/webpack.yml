@@ -55,6 +55,6 @@ jobs:
           body: |
             Auto-generated release for ${{ github.event.inputs.tag_name || github.ref_name }}
             Build date: ${{ github.event.head_commit.timestamp }}
-            Change Log: ${{ github.event.inputs.changelog || "优化已知问题" }}
+            Change Log: ${{ github.event.inputs.changelog || '优化已知问题' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
