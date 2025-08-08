@@ -10,6 +10,10 @@ on:
         description: '要发布的 Tag 名称（如 v1.0.0）'
         required: true
         type: string
+      changelog:
+        description: '更新描述'
+        required: false
+        type: string
 
 jobs:
   build-and-release:
@@ -49,7 +53,8 @@ jobs:
           tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}  # 动态使用 tag
           name: Release ${{ github.event.inputs.tag_name || github.ref_name }}
           body: |
-            Auto-generated release for ${{ github.ref_name }}
+            Auto-generated release for ${{ github.event.inputs.tag_name || github.ref_name }}
             Build date: ${{ github.event.head_commit.timestamp }}
+            Change Log: ${{ github.event.inputs.changelog || "优化已知问题" }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
