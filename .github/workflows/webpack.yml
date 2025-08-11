@@ -42,6 +42,18 @@ jobs:
           ls -R dist/
           [ -d "dist" ] || exit 1
 
+
+      - name: Ali Configuare
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: ${{ secrets.ENDPOINT }}
+          access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+
+      - name: Upload artifacts
+      - run: ossutil cp -r ./dist/ oss://${{ secrets.ALIYUN_OSS_BUCKET }}/
+
+
       - name: Zip artifacts
         run: |
           cd dist && zip -r ../site.zip ./*
