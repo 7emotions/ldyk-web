@@ -51,7 +51,7 @@ jobs:
           access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
 
       - name: Upload artifacts
-      - run: ossutil cp -r ./dist/ oss://${{ secrets.ALIYUN_OSS_BUCKET }}/
+        run: ossutil cp -r ./dist/ oss://${{ secrets.ALIYUN_OSS_BUCKET }}/
 
 
       - name: Zip artifacts
