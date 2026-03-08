@@ -29,13 +29,14 @@ const handleDownload = () => {
   const isIOS = /iphone|ipad|ipod/.test(ua);
 
   if (isIOS) {
-        window.location.href = 'https://apps.apple.com/cn/app/%E5%85%A8%E6%B0%91%E6%A8%A1%E7%8E%A9/id6746377602';
+    alert("敬请期待");
+    window.location.href = '';
   } else {
-    var apkUrl = 'http://api.rcfan.cn/download/latest/';
+    var apkUrl = 'http://api.ldyuankong.cn/app-api/system/app-version/download';
 
     var link = document.createElement('a');
     link.href = apkUrl;
-    link.download = 'app-qmmw.apk'; // 指定下载的文件名
+    link.download = 'app-ldyk.apk'; // 指定下载的文件名
     document.body.appendChild(link);
     link.click();
   
@@ -51,7 +52,7 @@ const handleDownload = () => {
     <main class="flex-grow">
       <div class="first-screen">
         <div class="logo-container">
-          <img class="logo" src="/logo1.jpg" alt="Logo" />全民模玩
+          <img class="logo" src="/logo1.jpg" alt="Logo" />灵动远控
         </div>
         <div class="relative  backdrop-blur-sm overflow-hidden border-b border-gray-200">
           <div class="mobile-container">
@@ -80,11 +81,10 @@ const handleDownload = () => {
         </div>
       </div>
       <div class="image-container">
-        <img src="/1.png" alt="">
-        <img src="/2.png" alt="">
-        <img src="/3.png" alt="">
-        <img src="/4.png" alt="">
-
+        <img src="/1.png" alt=""><br/>
+        <img src="/2.png" alt=""><br/>
+        <img src="/3.png" alt=""><br/>
+        <img src="/4.png" alt=""><br/>
       </div>
      <!-- 特色功能 -->
       <div class="py-6 bg-white/90 backdrop-blur-sm border-b border-gray-200">
@@ -122,11 +122,10 @@ const handleDownload = () => {
             <div class="mt-4 ">
               <ul class="contact-us">
                 <li>
-                  邮箱： 241527089@qq.com
+                  邮箱： 1482492539@qq.com
                 </li>
                 <li>
-                  微信： QMmowan
-                  <img src="/qrcode.png" alt="">
+                  微信： 17639590392
                 </li>
               </ul>
             </div>

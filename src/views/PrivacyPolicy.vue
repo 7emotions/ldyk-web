@@ -1,12 +1,12 @@
 <template>
   <div class="privacy-container">
     <div class="privacy-content">
-      <h1 class="text-2xl font-bold mb-4">全民模玩隐私政策</h1>
+      <h1 class="text-2xl font-bold mb-4">灵动远控隐私政策</h1>
       <p class="mb-4">最后更新：2025年4月1日</p>
       <p class="mb-4">请在使用我们的服务前，仔细阅读并理解《隐私政策》的全部内容。</p>
       
       <h2 class="text-xl font-bold mt-6 mb-2">一、政策概述</h2>
-      <p class="mb-4">南京遥驰风行网络科技有限公司（以下简称"我们"）深知隐私对您的重要性，并严格遵守相关法律法规。本政策适用于全民模玩APP及其相关服务。</p>
+      <p class="mb-4">南京千宏讯翔科技有限公司（以下简称"我们"）深知隐私对您的重要性，并严格遵守相关法律法规。本政策适用于灵动远控APP及其相关服务。</p>
       <p class="mb-4">我们的产品和服务主要面向成年人或十六周岁以上不满十八周岁以自己的劳动收入的公民。未成年人需在监护人同意下使用服务。</p>
       <p class="mb-4">我们承诺：</p>
       <ul class="list-disc pl-6 mb-4">
@@ -79,7 +79,7 @@
       <p class="mb-4">如有任何疑问，可通过以下方式联系：</p>
       <p class="mb-2">邮箱：1482492539@qq.com</p>
       <p class="mb-2">电话：13270449986</p>
-      <p class="mb-2">办公地址：南京遥驰风行网络科技有限公司</p>
+      <p class="mb-2">办公地址：南京千宏讯翔科技有限公司</p>
     </div>
   </div>
 </template>
