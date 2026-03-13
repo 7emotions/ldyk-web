@@ -1,682 +1,460 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>灵动远控隐私政策</title>
-        <style>
-                * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                        -webkit-tap-highlight-color: transparent;
-                        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-                }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>灵动远控 · 隐私政策</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-                body {
-                        background-color: #f5f7fa;
-                        color: #333;
-                        line-height: 1.6;
-                        padding: 0;
-                        margin: 0;
-                        min-height: 100vh;
-                        width: 100vw;
-                        overflow-x: hidden;
-                }
+		body {
+			background: #f2f5f9;
+			font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', Roboto, system-ui, sans-serif;
+			line-height: 1.7;
+			color: #1a2639;
+			padding: 2rem 1rem;
+		}
 
-                .container {
-                        width: 100%;
-                        min-height: 100vh;
-                        margin: 0 auto;
-                        background: white;
-                        padding: 20px 16px;
-                }
+		.privacy-card {
+			max-width: 1100px;
+			margin: 0 auto;
+			background: #ffffff;
+			border-radius: 32px;
+			box-shadow: 0 30px 60px -20px rgba(0, 30, 60, 0.3);
+			overflow: hidden;
+			padding: 2.8rem 3.2rem;
+			border: 1px solid #e4ecf7;
+		}
 
-                header {
-                        text-align: center;
-                        margin-bottom: 24px;
-                        padding-bottom: 16px;
-                        border-bottom: 1px solid #eaeaea;
-                        width: 100%;
-                }
+		/* 头部 */
+		.policy-header {
+			border-bottom: 2px solid #e2ecf5;
+			padding-bottom: 1.8rem;
+			margin-bottom: 2rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
 
-                h1 {
-                        font-size: 22px;
-                        color: #2c3e50;
-                        margin-bottom: 12px;
-                        line-height: 1.3;
-                        word-wrap: break-word;
-                }
+		.title-section h1 {
+			font-size: 2.4rem;
+			font-weight: 700;
+			background: linear-gradient(140deg, #0c3350, #1a5885);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			letter-spacing: 1px;
+			margin-bottom: 0.3rem;
+		}
 
-                .meta-info {
-                        color: #7f8c8d;
-                        font-size: 13px;
-                        margin-bottom: 8px;
-                        line-height: 1.4;
-                }
+		.company-badge {
+			background: #eef3fb;
+			padding: 0.25rem 1rem;
+			border-radius: 40px;
+			font-size: 0.9rem;
+			color: #1f4e7c;
+			display: inline-block;
+			font-weight: 500;
+		}
 
-                h2 {
-                        font-size: 18px;
-                        color: #3498db;
-                        margin: 20px 0 12px;
-                        padding-left: 10px;
-                        border-left: 4px solid #3498db;
-                        line-height: 1.3;
-                }
+		.meta-info {
+			text-align: right;
+			color: #4b668b;
+			font-size: 0.95rem;
+			background: #f4f9ff;
+			padding: 0.5rem 1.2rem;
+			border-radius: 50px;
+		}
 
-                h3 {
-                        font-size: 16px;
-                        color: #2c3e50;
-                        margin: 16px 0 10px;
-                        line-height: 1.3;
-                }
+		.meta-info p {
+			line-height: 1.5;
+		}
 
-                p {
-                        margin-bottom: 14px;
-                        text-align: justify;
-                        line-height: 1.6;
-                        font-size: 15px;
-                        word-wrap: break-word;
-                }
+		/* 强调段 */
+		.intro-box {
+			background: #f0f6fe;
+			border-radius: 20px;
+			padding: 1.5rem 2rem;
+			margin-bottom: 2.2rem;
+			border-left: 6px solid #1f6fb0;
+			font-size: 0.98rem;
+			color: #153e60;
+		}
 
-                ul,
-                ol {
-                        margin: 12px 0;
-                        padding-left: 24px;
-                }
+		.intro-box strong {
+			color: #0c2d48;
+		}
 
-                li {
-                        margin-bottom: 10px;
-                        font-size: 15px;
-                        line-height: 1.5;
-                }
+		.highlight {
+			background: #fff8e0;
+			font-weight: 600;
+			padding: 0.1rem 0.3rem;
+			border-radius: 6px;
+			color: #874e00;
+		}
 
-                .highlight {
-                        background-color: #fff9e6;
-                        padding: 14px;
-                        border-left: 4px solid #ffc107;
-                        margin: 18px 0;
-                        border-radius: 6px;
-                        font-size: 14px;
-                }
+		h2 {
+			font-size: 1.9rem;
+			font-weight: 650;
+			margin-top: 2.5rem;
+			margin-bottom: 1.2rem;
+			border-bottom: 2px solid #dde9f2;
+			padding-bottom: 0.4rem;
+			color: #123a60;
+		}
 
-                .warning {
-                        background-color: #ffebee;
-                        padding: 14px;
-                        border-left: 4px solid #f44336;
-                        margin: 18px 0;
-                        border-radius: 6px;
-                        font-size: 14px;
-                }
+		h3 {
+			font-size: 1.3rem;
+			font-weight: 600;
+			margin: 1.8rem 0 0.8rem;
+			color: #1c4f7c;
+			padding-left: 0.3rem;
+		}
 
-                table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        margin: 18px 0;
-                        font-size: 14px;
-                        table-layout: fixed;
-                        word-wrap: break-word;
-                }
+		.subhead {
+			font-weight: 600;
+			font-size: 1.15rem;
+			margin: 1.5rem 0 0.5rem;
+			color: #1b3f64;
+		}
 
-                th,
-                td {
-                        border: 1px solid #ddd;
-                        padding: 10px 8px;
-                        text-align: left;
-                        word-break: break-word;
-                }
+		p {
+			margin-bottom: 0.8rem;
+		}
 
-                th {
-                        background-color: #f2f2f2;
-                        font-weight: 600;
-                }
+		.legal-list,
+		.custom-list {
+			padding-left: 2rem;
+			margin: 1rem 0;
+			list-style-type: decimal;
+		}
 
-                .section {
-                        margin-bottom: 26px;
-                        width: 100%;
-                }
+		.legal-list li,
+		.custom-list li {
+			margin-bottom: 0.5rem;
+		}
 
-                .update-highlight {
-                        color: #e74c3c;
-                        font-weight: bold;
-                }
+		.bullet-list {
+			padding-left: 2rem;
+			list-style-type: disc;
+		}
 
-                footer {
-                        margin-top: 36px;
-                        text-align: center;
-                        color: #7f8c8d;
-                        font-size: 13px;
-                        padding: 16px 0;
-                        width: 100%;
-                }
+		.bullet-list li {
+			margin-bottom: 0.3rem;
+		}
 
-                /* 移动端优化 */
-                @media (max-width: 768px) {
-                        .container {
-                                padding: 16px 14px;
-                        }
+		.dash-list {
+			padding-left: 2rem;
+			list-style-type: circle;
+		}
 
-                        h1 {
-                                font-size: 20px;
-                        }
+		/* 权限卡片 */
+		.perm-grid {
+			background: #f8fbfe;
+			border-radius: 24px;
+			padding: 1.5rem 2rem;
+			margin: 1.5rem 0;
+			border: 1px solid #d0e2f2;
+		}
 
-                        h2 {
-                                font-size: 17px;
-                        }
+		.perm-item {
+			background: white;
+			border-radius: 16px;
+			padding: 1rem 1.5rem;
+			margin-bottom: 1rem;
+			box-shadow: 0 2px 8px rgba(0, 20, 40, 0.04);
+		}
 
-                        h3 {
-                                font-size: 15px;
-                        }
+		.perm-item strong {
+			color: #1d5885;
+			font-size: 1.05rem;
+			display: inline-block;
+			min-width: 140px;
+		}
 
-                        p,
-                        li {
-                                font-size: 14px;
-                        }
+		.sdk-block {
+			background: #f2f2fa;
+			border-radius: 18px;
+			padding: 1.2rem 1.8rem;
+			margin: 1.2rem 0;
+			border-left: 5px solid #3b6c9e;
+		}
 
-                        table {
-                                font-size: 13px;
-                        }
+		.sdk-name {
+			font-weight: 700;
+			font-size: 1.1rem;
+			color: #003b6f;
+		}
 
-                        th,
-                        td {
-                                padding: 8px 6px;
-                        }
-                }
+		.chip {
+			background: #ffffffb3;
+			border-radius: 40px;
+			padding: 0.1rem 0.7rem;
+			font-size: 0.8rem;
+			border: 1px solid #bed6ec;
+			color: #2b577b;
+			margin-left: 0.8rem;
+		}
 
-                /* 安卓特定优化 */
-                @media (max-width: 480px) {
-                        .container {
-                                padding: 14px 12px;
-                        }
+		hr {
+			border: none;
+			border-top: 2px dashed #cbdae9;
+			margin: 2rem 0;
+		}
 
-                        h1 {
-                                font-size: 19px;
-                        }
+		.mark-strong {
+			background-color: #fdefcb;
+			font-weight: 600;
+			padding: 0 0.2rem;
+			border-radius: 4px;
+		}
 
-                        h2 {
-                                font-size: 16px;
-                                padding-left: 8px;
-                        }
+		.footer-note {
+			background: #e3eefb;
+			border-radius: 20px;
+			padding: 1.5rem 2rem;
+			margin-top: 2rem;
+			font-size: 0.96rem;
+		}
 
-                        ul,
-                        ol {
-                                padding-left: 20px;
-                        }
-                }
+		a {
+			color: #1c6fb4;
+			word-break: break-all;
+		}
 
-                /* 防止表格溢出 */
-                table {
-                        overflow-x: auto;
-                        display: block;
-                }
+		@media (max-width: 700px) {
+			.privacy-card {
+				padding: 1.8rem 1.2rem;
+			}
 
-                /* 确保内容不超出屏幕 */
-                img,
-                table,
-                video,
-                iframe {
-                        max-width: 100%;
-                }
+			.policy-header {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.8rem;
+			}
 
-                /* 改善触摸体验 */
-                a,
-                button {
-                        min-height: 44px;
-                        min-width: 44px;
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                }
-        </style>
+			.meta-info {
+				text-align: left;
+				width: 100%;
+			}
+		}
+	</style>
 </head>
 
 <body>
-        <div class="container">
-                <header>
-                        <h1>灵动远控隐私政策</h1>
-                        <div class="meta-info">
-                                <p>发布及生效时间：2025年3月14日</p>
-                                <p>更新时间：<span class="update-highlight">2025年8月20日</span></p>
-                                <p>公司名称：南京千宏讯翔科技有限公司</p>
-                                <p>注册地址/常用办公联系地址：南京市玄武区孝陵卫200号南京理工大学大学生创业孵化园</p>
-                                <p>联系邮箱：1482492539@qq.com</p>
-                        </div>
-                </header>
+	<div class="privacy-card">
+		<!-- 头部信息 -->
+		<div class="policy-header">
+			<div class="title-section">
+				<h1>隐私政策</h1>
+				<div class="company-badge">南京千宏讯翔科技有限公司 · 灵动远控</div>
+			</div>
+			<div class="meta-info">
+				<p><strong>发布/生效时间：</strong>2026年3月3日<br><strong>更新时间：</strong>2026年3月5日</p>
+				<p style="font-size:0.88rem; margin-top:0.2rem;">📬 联系邮箱：1482492539@qq.com</p>
+			</div>
+		</div>
 
-                <div class="section">
-                        <p>本政策仅适用于南京千宏讯翔科技有限公司提供的产品和服务及其延伸的功能（以下简称"灵动远控"）。如我们提供的某款产品有单独的隐私政策或相应的用户服务协议当中存在特殊约定，则该产品的隐私政策将优先适用；该款产品隐私政策和用户服务协议未涵盖的内容，以本政策内容为准。
-                        </p>
+		<!-- 公司地址 -->
+		<p
+			style="background:#f5faff; padding:0.6rem 1.2rem; border-radius:50px; color:#1f4465; margin-top:-0.5rem; margin-bottom:1.8rem;">
+			<span style="font-weight:600;">注册/办公地址：</span>江苏省南京市浦口区浦口经济开发区兰花路19号2幢314-1室
+		</p>
 
-                        <div class="highlight">
-                                <p>请您在使用"灵动远控"各项产品或者服务前，务必仔细阅读并透彻理解本政策，<strong>特别是以粗体标识的条款</strong>，您应重点阅读，确保您充分理解和同意后再开始使用。
-                                </p>
-                        </div>
+		<!-- 引言 -->
+		<div class="intro-box">
+			<p><strong>📘
+					适用范围与优先原则：</strong>本政策仅适用于<strong>南京千宏讯翔科技有限公司</strong>提供的产品和服务及其延伸的功能（以下简称“灵动远控”）。如我们提供的某款产品有单独的隐私政策或相应的用户服务协议当中存在特殊约定，则该产品的隐私政策将优先适用；该款产品隐私政策和用户服务协议未涵盖的内容，以本政策内容为准。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本系统不会将这些信息对外披露或向第三方提供。本系统会不时更新本隐私权政策。
+			</p>
+			<p style="margin-top:0.5rem;">您在同意本系统服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本系统服务使用协议不可分割的一部分。</p>
+		</div>
 
-                        <p>本隐私政策将帮助您了解以下内容：</p>
-                        <ul>
-                                <li>一、定义及适用范围</li>
-                                <li>二、我们如何收集和使用您的个人信息</li>
-                                <li>三、我们如何使用Cookie和同类技术</li>
-                                <li>四、我们如何共享、转让、公开披露您的信息</li>
-                                <li>五、我们如何保护、存储您的信息</li>
-                                <li>六、如何访问和管理自己的信息</li>
-                                <li>七、第三方SDK使用说明</li>
-                                <li>八、其他</li>
-                        </ul>
-                </div>
+		<p><span class="highlight">本政策适用于“灵动远控”提供的所有产品和服务。</span>
+			在您使用“灵动远控”各项产品或者服务前，请您务必仔细阅读并透彻理解本政策，特别是以粗体/粗体下划线标识的条款，您应重点阅读，确保您充分理解和同意后再开始使用。本政策中涉及的专业词汇，我司尽量以简明通俗的表述向您解释，以便于您理解。
+		</p>
 
-                <div class="section">
-                        <h2>一、定义及适用范围</h2>
-                        <p>本政策适用于南京千宏讯翔科技有限公司提供的"灵动远控"产品和服务及其延伸功能。</p>
+		<p style="font-weight:500; margin:1.5rem 0 0.5rem;">本隐私政策将帮助您了解以下内容：</p>
+		<ul class="bullet-list" style="margin-bottom:1.8rem;">
+			<li>一、定义及适用范围</li>
+			<li>二、我司如何收集和使用您的个人信息</li>
+			<li>三、我司如何使用Cookie和同类技术</li>
+			<li>四、我司如何共享、转让、公开披露您的信息</li>
+			<li>五、我司如何保护、存储您的信息</li>
+			<li>六、如何访问和管理自己的信息、信息安全</li>
+			<li>七、其他</li>
+		</ul>
 
-                        <h3>1.1 适用范围</h3>
-                        <p>本政策适用于以下情况：</p>
-                        <ul>
-                                <li>在您注册本系统帐号时提供的个人注册信息（包括手机号码）；</li>
-                                <li>在您使用本系统网络服务时，系统自动接收并记录的信息；</li>
-                                <li>本系统通过合法途径从商业伙伴处取得的用户个人数据。</li>
-                        </ul>
+		<!-- 一、适用范围 -->
+		<h2>一、适用范围</h2>
+		<ul class="legal-list">
+			<li><strong>a)</strong> 在您注册本系统帐号时，您根据本系统要求提供的个人注册信息（包括手机号码）；</li>
+			<li><strong>b)</strong>
+				在您使用本系统网络服务，或访问本系统平台网页时，本系统自动接收并记录的您的浏览器和计算机上的信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；
+			</li>
+			<li><strong>c)</strong> 本系统通过合法途径从商业伙伴处取得的用户个人数据。</li>
+			<li><strong>d)</strong> <strong>位置信息</strong>：您使用位置服务时，我们需要收集和处理您的位置信息。</li>
+			<li><strong>e)</strong>
+				<strong>设备信息</strong>：为了保证服务的正常运行，向您提供问题诊断或设备检测服务，我们会收集您的硬件型号、操作系统版本、设备配置、唯一设备标识符、网络设备硬件地址MAC、设备连接信息以及设备状态信息等。基于不同的系统，设备信息表述文字有所不同。
+			</li>
+		</ul>
 
-                        <h3>1.2 不适用情况</h3>
-                        <p>您了解并同意，以下信息不适用本隐私权政策：</p>
-                        <ul>
-                                <li>您在使用本系统平台提供的搜索服务时输入的关键字信息；</li>
-                                <li>本系统收集到的您在本系统发布的有关信息数据，包括但不限于参与活动、成交信息及评价详情；</li>
-                                <li>违反法律规定或违反本系统规则行为及本系统已对您采取的措施。</li>
-                        </ul>
-                </div>
+		<div class="subhead">📱 设备权限收集说明：</div>
+		<div class="perm-grid">
+			<div class="perm-item"><strong>1. 电话权限</strong>（获取手机识别码）: 您登录本平台识别您的设备身份，需要调用您的电话权限获取此项信息，除此之外不会基于其他用途进行调用。
+			</div>
+			<div class="perm-item"><strong>2. 存储权限</strong>（读写存储）:
+				为了存储必要的应用配置文件以及您所选择下载、更新的内容、报表，或读取您需要上传、同步的内容，需要调用您的存储权限。</div>
+			<div class="perm-item"><strong>3. 相机权限</strong>: 当您使用拍摄或扫描相关功能时，我们需要调用您的相机权限。</div>
+			<div class="perm-item"><strong>4. 相册权限</strong>: 当您使用更换头像或者意见反馈填写功能时，我们需要调用您的相册获取图片权限填写。</div>
+		</div>
 
-                <div class="section">
-                        <h2>二、我们如何收集和使用您的个人信息</h2>
-                        <p>我们会遵循合法、正当、必要的原则，按照本政策所述收集和使用您的个人信息。</p>
+		<p><strong>您了解并同意，以下信息不适用本隐私权政策：</strong></p>
+		<ul class="dash-list">
+			<li>a) 您在使用本系统平台提供的搜索服务时输入的关键字信息；</li>
+			<li>b) 本系统收集到的您在本系统发布的有关信息数据，包括但不限于参与活动、成交信息及评价详情；</li>
+			<li>c) 违反法律规定或违反本系统规则行为及本系统已对您采取的措施。</li>
+		</ul>
 
-                        <h3>2.1 信息收集类型与用途</h3>
-                        <p>为向您提供优质的服务，我们可能会收集以下类型的个人信息：</p>
+		<!-- 二、信息使用 -->
+		<h2>二、信息使用</h2>
+		<ul class="legal-list">
+			<li><strong>a)</strong>
+				本系统不会向任何无关第三方提供、出售、出租、分享或交易您的个人信息，除非事先得到您的许可，或该第三方和本系统（含本系统关联公司）单独或共同为您提供服务，且在该服务结束后，其将被禁止访问包括其以前能够访问的所有这些资料。
+			</li>
+			<li><strong>b)</strong> 本系统亦不允许任何第三方以任何手段收集、编辑、出售或者无偿传播您的个人信息。任何本系统平台用户如从事上述活动，一经发现，本系统有权立即终止与该用户的服务协议。</li>
+			<li><strong>c)</strong>
+				为服务用户的目的，本系统可能通过使用您的个人信息，向您提供信息，包括但不限于向您发出产品和服务信息，或者与本系统合作伙伴共享信息以便他们向您发送有关其产品和服务的信息（后者需要您的事先同意）。</li>
+			<li><strong>d)</strong> 为了向用户提供更好的服务或产品，本系统可能会在下述情形使用用户的个人信息：根据相关法律法规的要求；根据用户的授权；根据本系统相关服务条款、应用许可使用协议的约定。
+			</li>
+			<li><strong>e)</strong> 为您提供信息或服务，向您发送最新资讯内容。若您拒绝或关闭设备信息后，我们向您推送的信息会降低精准度或相关度，但不影响您正常使用其他不需要该权限的功能。</li>
+		</ul>
 
-                        <table>
-                                <tr>
-                                        <th>信息类型</th>
-                                        <th>收集目的</th>
-                                        <th>使用场景</th>
-                                </tr>
-                                <tr>
-                                        <td>设备标识信息(IMEI, Android ID, OAID, MAC地址，IP地址等)</td>
-                                        <td>账号安全、反作弊、服务稳定性保障</td>
-                                        <td>用户登录、安全风控</td>
-                                </tr>
-                                <tr>
-                                        <td>软件安装列表</td>
-                                        <td>第三方应用跳转、广告投放</td>
-                                        <td>跳转到第三方直播应用</td>
-                                </tr>
-                                <tr>
-                                        <td>位置信息</td>
-                                        <td>提供基于位置的服务</td>
-                                        <td>附件内容推荐</td>
-                                </tr>
-                                <tr>
-                                        <td>传感器信息</td>
-                                        <td>音视频服务适配、设备功能支持</td>
-                                        <td>视频播放</td>
-                                </tr>
-                                <tr>
-                                        <td>个人身份信息</td>
-                                        <td>实名认证、交易安全</td>
-                                        <td>支付功能</td>
-                                </tr>
-                        </table>
+		<!-- 三、Cookie的使用 -->
+		<h2>三、Cookie的使用</h2>
+		<ul class="legal-list">
+			<li><strong>a)</strong>
+				在您未拒绝接受cookies的情况下，本系统会在您的计算机上设定或取用cookies，以便您能登录或使用依赖于cookies的本系统平台服务或功能。本系统使用cookies可为您提供更加周到的服务，包括推广服务。
+			</li>
+			<li><strong>b)</strong>
+				您有权选择接受或拒绝接受cookies。您可以通过修改浏览器设置的方式拒绝接受cookies。但如果您选择拒绝接受cookies，则您可能无法登录或使用依赖于cookies的本系统网络服务或功能。</li>
+			<li><strong>c)</strong> 通过本系统所设cookies所取得的有关信息，将适用本政策。</li>
+		</ul>
 
-                        <div class="warning">
-                                <p><strong>特别说明：</strong>在应用处于<strong>静默或后台运行状态</strong>时，我们可能会收集设备标识符、软件安装列表、网络状态等信息，用于反作弊、广告归因、服务稳定性保障等目的。
-                                </p>
-                        </div>
-                        <h3>2.2 个人信息收集清单</h3>
-                        <p>根据相关法律法规要求，我们明确告知您，本政策涉及的个人信息或权限包括但不限于：</p>
-                        <ol>
-                                <li><strong>基本信息</strong>：包括个人姓名、生日、性别、住址、个人电话号码、电子邮箱；</li>
-                                <li><strong>个人身份信息</strong>：包括身份证相关身份证明等；</li>
-                                <li><strong>财产信息</strong>：包括交易记录以及金币、钻石等虚拟财产信息；</li>
-                                <li><strong>个人位置信息</strong>；</li>
-                                <li><strong>网络身份标识信息</strong>：包括系统账号、IP地址、邮箱地址及与前述有关的密码、密保；</li>
-                                <li><strong>通讯录</strong>；</li>
-                                <li><strong>个人上网记录</strong>：包括搜索记录、软件使用记录、点击记录；</li>
-                                <li><strong>个人常用设备信息</strong>：包括硬件型号、设备MAC地址、操作系统类型；</li>
-                                <li><strong>设备识别信息</strong>：如IMEI、Android ID、IDFA、OPENUDID、GUID、SIM卡IMSI信息等；</li>
-                        </ol>
-                        <ol start="10">
-                                <li><strong>SIM卡信息</strong>：包括ICCID、IMSI等SIM卡相关信息；</li>
-                                <li><strong>设备传感器信息</strong>：包括加速度传感器、陀螺仪传感器等设备传感器数据；</li>
-                                <li><strong>剪切板信息</strong>：在您执行粘贴操作时读取剪切板内容；</li>
-                                <li><strong>图片和音视频信息</strong>：包括您上传的图片、视频等多媒体内容；</li>
-                                <li><strong>通话记录和日历信息</strong>：在相关功能中使用；</li>
-                                <li><strong>本机电话号码</strong>：用于识别设备关联的手机号码；</li>
-                                <li><strong>SUPI/SUCI信息</strong>：5G网络相关的用户标识信息；</li>
-                        </ol>
+		<!-- 四、信息披露 -->
+		<h2>四、信息披露</h2>
+		<p>在如下情况下，本系统将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：</p>
+		<ul class="legal-list">
+			<li><strong>a)</strong> 经您事先同意，向第三方披露；</li>
+			<li><strong>b)</strong> 为提供您所要求的产品和服务，而必须和第三方分享您的个人信息；</li>
+			<li><strong>c)</strong> 根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；</li>
+			<li><strong>d)</strong> 如您出现违反中国有关法律、法规或者本系统服务协议或相关规则的情况，需要向第三方披露；</li>
+			<li><strong>e)</strong> 如您是适格的知识产权投诉人并已提起投诉，应被投诉人要求，向被投诉人披露，以便双方处理可能的权利纠纷；</li>
+			<li><strong>f)</strong>
+				在本系统平台上创建的某一交易中，如交易任何一方履行或部分履行了交易义务并提出信息披露请求的，本系统有权决定向该用户提供其交易对方的联络方式等必要信息，以促成交易的完成或纠纷的解决。</li>
+			<li><strong>g)</strong> 其它本系统根据法律、法规或者网站政策认为合适的披露。</li>
+		</ul>
 
-                        <h3>2.3 设备权限调用说明</h3>
-                        <p>为了提供相关服务，我们可能需要调用您的设备权限：</p>
-                        <ul>
-                                <li><strong>电话权限</strong>：用于获取设备标识信息，识别您的设备身份</li>
-                                <li><strong>存储权限</strong>：用于存储配置文件、下载内容和读取上传内容</li>
-                                <li><strong>相机权限</strong>：用于拍摄或扫描相关功能</li>
-                                <li><strong>相册权限</strong>：用于更换头像或意见反馈时获取图片</li>
-                        </ul>
-                        <h3>2.4 权限使用说明</h3>
-                        <p>请您知悉，在您拒绝相关权限授权后，我们可能无法提供对应的服务：</p>
-                        <ul>
-                                <li><strong>拒绝电话权限</strong>：无法获取设备标识符，可能影响账号安全验证</li>
-                                <li><strong>拒绝位置权限</strong>：无法提供基于位置的服务和内容推荐</li>
-                                <li><strong>拒绝存储权限</strong>：无法下载和保存文件内容</li>
-                                <li><strong>拒绝相机权限</strong>：无法使用扫码和拍摄功能</li>
-                        </ul>
-                        <p>但我们承诺，拒绝非必要权限不会影响您使用其他不依赖该权限的功能。</p>
+		<!-- 五、信息存储和交换（含sdk列表） -->
+		<h2>五、信息存储和交换</h2>
+		<p>本系统收集的有关您的信息和资料将保存在本系统及（或）其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或本系统收集信息和资料所在地的境外并在境外被访问、存储和展示。</p>
+		<p>为保证向您提供本隐私政策目的所述的服务，我们可能会向第三方服务提供商与业务合作伙伴等第三方共享必要的个人信息。</p>
+		<p>为了使您能够接收信息、在第三方平台分享信息、使用地图服务、播放视频等必要的功能用途，我们的应用中会嵌入授权合作伙伴的SDK或其他类似的应用程序。如您使用华为/小米/魅族手机时，华为/小米/魅族SDK需要读取您的设备识别号、联网相关信息，用于下发通知栏消息；如您使用高德提供的地图服务，高德SDK需要您打开设备位置权限并收集设备所在位置相关信息信息、设备识别号、联网相关信息。
+		</p>
+		<p>我们会对授权合作伙伴获取有关信息的应用程序接口（API）、软件工具开发包（SDK）进行严格的安全检测，并与授权合作伙伴约定严格的数据保护措施，令其按照我们的委托目的、服务说明、本隐私权政策以及其他任何相关的保密和安全措施来处理个人信息。
+		</p>
+		<p><span class="mark-strong">我们还会收集您的IMSI、IMEI、设备MAC地址、软件列表、设备序列号、Android ID用于判断您上次登录的方式，目的是方便您使用登录功能。</span>
+		</p>
 
-                        <h3>2.5 信息使用规则</h3>
-                        <p>我们承诺在以下情况下使用您的个人信息：</p>
-                        <ul>
-                                <li>根据相关法律法规的要求；</li>
-                                <li>根据您的授权；</li>
-                                <li>根据本系统相关服务条款、应用许可使用协议的约定。</li>
-                        </ul>
-                        <h3>2.6 信息收集频率说明</h3>
-                        <p>我们明确告知您各类个人信息的收集频率：</p>
-                        <ul>
-                                <li><strong>设备标识信息</strong>：应用启动时收集一次，除非设备信息发生变化</li>
-                                <li><strong>位置信息</strong>：在使用位置相关功能时按需收集</li>
-                                <li><strong>软件安装列表</strong>：应用启动时收集一次，用于跳转判断</li>
-                                <li><strong>后台运行时的信息收集</strong>：按系统广播机制触发，非持续高频收集</li>
-                        </ul>
-                        <p>所有信息收集频率均遵循实现产品或服务的业务功能所必需的最低频率原则。</p>
-                </div>
+		<div class="subhead">📋 本政策涉及的<b>个人信息或权限</b>包括：</div>
+		<ul class="bullet-list" style="background:#f6faff; padding:1rem 1.5rem 1rem 2.5rem; border-radius:18px;">
+			<li>基本信息（个人姓名、生日、性别、住址、个人电话号码、电子邮箱）</li>
+			<li>个人身份信息（包括身份证相关身份证明等）</li>
+			<li>财产信息（交易记录以及金币、钻石等虚拟财产信息）</li>
+			<li>个人位置信息</li>
+			<li>网络身份标识信息（系统账号、IP地址、邮箱地址及密码、密保）；通讯录</li>
+			<li>个人上网记录（搜索记录、软件使用记录、点击记录）</li>
+			<li>个人常用设备信息（硬件型号、<strong>设备MAC地址</strong>、操作系统类型）</li>
+			<li>软件列表唯一设备识别码（如<strong>IMEI/android ID/IDFA/OPENUDID/GUID、SIM卡IMSI信息</strong>等，存在收集ICCID、<strong>Android
+					ID、IP、IMSI、SD卡数据、IMEI、安装列表、设备序列号、传感器、MAC、OAID、IMEI、OAID、IMSI、MAC、应用列表、获取传感器信息、监听传感器、获取设备传感器、加速度传感器、剪切板</strong>的行为）。
+			</li>
+		</ul>
 
-                <div class="section">
-                        <h2>三、我们如何使用Cookie和同类技术</h2>
-                        <p>为确保网站正常运转、为您获得更轻松的访问体验，我们会在您的计算机或移动设备上存储Cookie、Flash
-                                Cookie或浏览器（或关联应用程序）提供的其他通常包含标识符、站点名称以及一些号码和字符的本地存储（统称"Cookie"）。</p>
+		<h3>🔌 第三方SDK列表</h3>
 
-                        <p><strong>在安卓端，我们可能会使用与Cookie类似的技术，如移动设备标识符（包括Android
-                                        ID、OAID等）和Token机制，用于实现用户身份验证、保持登录状态、保障账号安全等功能。这些技术与Cookie类似，可以帮助我们识别您的设备并提供更优质的服务。</strong>
-                        </p>
+		<div class="sdk-block"><span class="sdk-name">1. 移动智能终端补充设备标识体系统一调用SDK</span> <span class="chip">包名
+				com.bun</span><br>厂家：中国信息通信研究院<br>描述：获取华为、小米、OPPO等设备厂商的补充设备标识（OAID、AAID等）。个人信息：获取OAID。</div>
 
-                        <p>您可以根据自己的偏好管理或删除Cookie。但请注意，如果停用Cookie或相关技术，您可能无法享受最佳的服务体验，某些服务也可能无法正常使用。</p>
-                </div>
+		<div class="sdk-block"><span class="sdk-name">2. 高德SDK / 定位SDK</span> <span
+				class="chip">开发者:高德软件有限公司</span><br>作用：定位、地图展示及poi查询。收集：外部存储状态、最近地理位置、持续定位、网络类型、IMEI、MAC地址、WiFi信息。<br>隐私链接：<a
+				href="https://lbs.amap.com/pages/privacy/" target="_blank">https://lbs.amap.com/pages/privacy/</a></div>
 
-                <div class="section">
-                        <h2>四、我们如何共享、转让、公开披露您的信息</h2>
-                        <p>我们不会与任何公司、组织和个人共享您的个人信息，但以下情况除外：</p>
-                        <ul>
-                                <li>事先获得您明确的同意或授权；</li>
-                                <li>根据适用的法律法规、法律程序的要求、强制性的行政或司法要求所必须的情况下；</li>
-                                <li>在法律法规允许的范围内，为维护"灵动远控"、灵动远控的关联方或合作伙伴、您或其他灵动远控用户或社会公众利益、财产或安全免遭损害而有必要提供；</li>
-                                <li>只有共享您的信息，才能实现我们的产品与/或服务的核心功能或提供您需要的服务；</li>
-                                <li>应您需求为您处理您与他人的纠纷或争议。</li>
-                        </ul>
+		<div class="sdk-block"><span class="sdk-name">3. 支付宝-阿里支付；APP支付客户端SDK</span> <span
+				class="chip">支付宝(杭州)</span><br>作用：支付宝支付。收集：系统语言、唯一标识符、外部存储、网络类型、设备型号、SIM卡序列号、IMEI、MAC、ANDROID_ID、IP、WiFi信息、应用安装列表、OpenUDID。<br>隐私链接：<a
+				href="https://opendocs.alipay.com/open/54/01g6qm" target="_blank">opendocs.alipay.com</a></div>
 
-                        <p>在如下情况下，本系统将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：</p>
-                        <ul>
-                                <li>经您事先同意，向第三方披露；</li>
-                                <li>为提供您所要求的产品和服务，而必须和第三方分享您的个人信息；</li>
-                                <li>根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；</li>
-                                <li>如您出现违反中国有关法律、法规或者本系统服务协议或相关规则的情况，需要向第三方披露；</li>
-                                <li>如您是适格的知识产权投诉人并已提起投诉，应被投诉人要求，向被投诉人披露，以便双方处理可能的权利纠纷；</li>
-                                <li>在本系统平台上创建的某一交易中，如交易任何一方履行或部分履行了交易义务并提出信息披露请求的，本系统有权决定向该用户提供其交易对方的联络方式等必要信息，以促成交易的完成或纠纷的解决。
-                                </li>
-                        </ul>
-                        <h3>4.1 第三方共享明细</h3>
-                        <p>我们向您明确告知共享的第三方身份、目的及个人信息类型：</p>
-                        <table>
-                                <tr>
-                                        <th>第三方名称</th>
-                                        <th>共享目的</th>
-                                        <th>共享信息类型</th>
-                                </tr>
-                                <tr>
-                                        <td>支付宝(中国)网络技术有限公司</td>
-                                        <td>支付服务</td>
-                                        <td>设备信息、交易信息</td>
-                                </tr>
-                                <tr>
-                                        <td>深圳市腾讯计算机系统有限公司</td>
-                                        <td>微信登录、支付服务</td>
-                                        <td>设备信息、微信账号信息</td>
-                                </tr>
-                                <tr>
-                                        <td>北京巨量引擎网络技术有限公司</td>
-                                        <td>广告投放</td>
-                                        <td>设备标识符、广告交互数据</td>
-                                </tr>
-                                <tr>
-                                        <td>杰峰云</td>
-                                        <td>摄像头连接服务</td>
-                                        <td>设备信息、网络状态</td>
-                                </tr>
-                        </table>
-                </div>
+		<div class="sdk-block"><span class="sdk-name">4. 微信；微信OpenSDK Android</span> <span
+				class="chip">腾讯</span><br>作用：微信授权登录、分享、支付。收集：第三方账号、设备信息（Open
+			UDID、IMEI、IDFA、MAC、型号、系统版本）、时区、语言等；Bugly部分会读取CRASH环境、线程堆栈、应用信息。<br>隐私链接：<a
+				href="https://support.weixin.qq.com/cgi-bin/mmsupportacctnodeweb-bin/pages/RYiYJkLOrQwu0nb8"
+				target="_blank">微信隐私</a></div>
 
+		<div class="sdk-block"><span class="sdk-name">5. QQSDK / QQ互联sdk</span> <span
+				class="chip">腾讯</span><br>收集：设备型号、操作系统版本、唯一标识符、电池、信号强度、IP、地理位置、服务日志等。目的：QQ登录及分享。<br>隐私链接：<a
+				href="https://wiki.connect.qq.com/qq%e4%ba%92%e8%81%94sdk%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e5%a3%b0%e6%98%8e"
+				target="_blank">QQ互联隐私</a></div>
 
-                <div class="section">
-                        <h2>五、我们如何保护、存储您的信息</h2>
-                        <p>我们已采取符合业界标准的安全防护措施保护您提供的个人信息，防止数据遭到未经授权访问、公开披露、使用、修改、损坏或丢失。</p>
+		<div class="sdk-block"><span class="sdk-name">6. 腾讯Bugly
+				SDK</span><br>收集：日志信息、联网信息、系统名称版本、IMEI、IMSI、DEVICEID、MAC地址、国家码。目的：App稳定性监控、崩溃上报。<br>用户协议：<a
+				href="https://bugly.qq.com/v2/contract" target="_blank">bugly.qq.com</a></div>
 
-                        <p>我们将在中华人民共和国境内运营过程中收集和产生的个人信息存储在中国境内，不会向境外提供。</p>
+		<div class="sdk-block"><span class="sdk-name">7. 声网(agora) 视频/音频SDK</span> <span
+				class="chip">上海兆言网络</span><br>涉及信息：麦克风、摄像头、电话状态、WiFi状态、网络、运营商、蓝牙、修改音频设置、写外部存储、保持唤醒。用途：实时音视频服务。<br>隐私链接：<a
+				href="https://www.shengwang.cn/SDK-privacy-policy/" target="_blank">shengwang.cn</a></div>
 
-                        <p>我们仅在本政策所述目的所必需期间和法律法规要求的时限内保留您的个人信息。</p>
+		<div class="sdk-block"><span class="sdk-name">8. 字节跳动SDK</span> <span
+				class="chip">北京抖音</span><br>用途：App中投放广告。收集个人信息类型：OAID、设备序列号、Android
+			ID、IMEI、SD卡数据、传感器、MAC；在静默/后台时可能收集IMEI、IMSI、MAC、软件安装列表、位置等。广告反作弊。<br>隐私说明：<a
+				href="https://privacy.bytedance.com/zh/policy" target="_blank">bytedance隐私</a></div>
 
-                        <div class="highlight">
-                                <p><strong>信息安全提示：</strong>请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是本系统用户名及密码发生泄露，请您立即联络本系统客服，以便我们采取相应措施。
-                                </p>
-                        </div>
-                </div>
+		<div class="sdk-block"><span class="sdk-name">9. 穿山甲广告SDK（巨量、穿山甲引擎）</span> <span
+				class="chip">北京巨量引擎</span><br>服务：广告投放、监测归因、反作弊。收集：IP、运营商、Wi-Fi状态、应用包名、运行进程、传感器信息、设备标识符IMEI/IMSI/ICCID/GAID/OAID、MAC、MEID、Android
+			ID、SD卡数据等。<br>隐私链接：<a href="https://www.csjplatform.com/privacy" target="_blank">csjplatform.com</a></div>
 
-                <div class="section">
-                        <h2>六、如何访问和管理自己的信息</h2>
-                        <p>您可以通过以下方式访问和管理您的个人信息：</p>
+		<!-- 六、访问和管理/信息安全 -->
+		<h2>六、如何访问和管理自己的信息、信息安全</h2>
+		<h3>（一）信息安全</h3>
+		<ul class="bullet-list">
+			<li><strong>a)</strong>
+				帐号均有安全保护功能，请妥善保管您的用户名及密码信息。我们将通过对用户密码进行加密等安全措施确保您的信息不丢失，不被滥用和变造。尽管有前述安全措施，但同时也请您注意在信息网络上不存在“完善的安全措施”。
+			</li>
+			<li><strong>b)</strong>
+				在使用本系统网络服务进行网上交易时，您不可避免的要向交易对方或潜在的对方披露个人信息。请您妥善保护个人信息，仅在必要情形下提供。如发现信息泄露，尤其是用户名及密码泄露，请立即联络本系统客服。</li>
+		</ul>
+		<h3>（二）如何访问和管理自己的信息</h3>
+		<ul class="bullet-list">
+			<li><strong>a)</strong> 我们将采取适当的技术手段，保证您可以查询您的注册信息。您可以通过“我的”查看头像、昵称等，点击“设置”可以修改昵称。</li>
+			<li><strong>b) 账号注销：</strong>您可以通过点击“我的” — “个人设置” — “注销账号”，输入登录密码进行注销。注销后，已收集的个人信息将进行删除或匿名化处理。</li>
+		</ul>
 
-                        <h3>6.1 信息查询与更正</h3>
-                        <p>您可以通过"我的"页面查看您的头像、昵称等信息，点击"设置"可以修改昵称。</p>
+		<!-- 七、其他 -->
+		<h2>七、其他</h2>
+		<ol class="legal-list" style="list-style-type: decimal;">
+			<li>本隐私政策的签订、生效、履行、争议的解决均适用中华人民共和国法律。</li>
+			<li>有关本协议的争议应通过友好协商解决，如果协商不成，该争议将提交公司所在地有管辖权的法院诉讼解决。</li>
+		</ol>
 
-                        <h3>6.2 账号注销</h3>
-                        <p>您可以通过点击"我的"→"个人设置"→"注销账号"，输入登录密码，进行注销账号操作。账号注销后，我们将对已经收集的个人信息进行删除或匿名化处理。</p>
-
-                        <h3>6.3 撤回授权</h3>
-                        <p>您可以通过设备本身操作系统变更您对App开启的权限，撤回授权后我们将不再收集与这些权限相关的信息。</p>
-                </div>
-
-                <div class="section">
-                        <h2>七、第三方SDK使用说明</h2>
-                        <p><strong>第三方SDK处理说明：</strong>我们通过隐私政策弹窗等形式向您明示第三方SDK处理个人信息的目的、方式和范围。以下列出的第三方SDK可能会收集和处理IMEI、IMSI、设备MAC地址、软件安装列表、位置信息等个人信息，我们已要求这些SDK按照其公开的隐私政策处理您的信息，并仅在实现特定功能所必需的范围内收集信息。
-                        </p>
-
-                        <div class="warning">
-                                <p><strong>重要提示：</strong>在您同意本隐私政策后，这些第三方SDK可能会开始收集相应的个人信息。您可以通过各SDK的隐私政策链接详细了解其信息处理
-                                        practices，如不同意某SDK的信息处理方式，您可能需要避免使用相关功能。</p>
-                        </div>
-                        <h3>7.1 第三方SDK使用说明</h3>
-                        <p><strong>杰峰云SDK使用说明：</strong>我们使用杰峰云SDK用于连接智能摄像头设备，实现视频画面的实时播放和远程监控功能。该SDK会涉及以下权限和信息的收集：</p>
-                        <ul>
-                                <li><strong>摄像头权限</strong>：用于获取视频流数据并显示监控画面</li>
-                                <li><strong>蓝牙权限</strong>：用于搜索、发现和配对附近的摄像头设备</li>
-                                <li><strong>位置权限</strong>：在Android系统中，蓝牙扫描需要位置权限支持</li>
-                                <li><strong>设备信息</strong>：包括设备标识符，用于建立设备间的安全连接</li>
-                                <li><strong>网络信息</strong>：用于视频流的稳定传输和远程连接</li>
-                        </ul>
-                        <p>这些信息的收集仅限于实现摄像头连接和视频播放功能所需，我们要求杰峰云SDK按照最小必要原则处理您的个人信息。</p>
-                        <h3>支付相关SDK说明</h3>
-                        <p>为方便您进行支付操作，我们接入了以下支付SDK：</p>
-
-                        <h4>微信SDK使用说明：</h4>
-                        <p>用于实现<strong>微信登录</strong>和<strong>微信支付</strong>功能：</p>
-                        <ul>
-                                <li><strong>微信登录</strong>：通过微信授权快速登录您的账号</li>
-                                <li><strong>微信支付</strong>：支持使用微信支付完成交易</li>
-                                <li><strong>收集信息</strong>：设备标识符、网络状态、微信OpenID、交易订单信息</li>
-                        </ul>
-
-                        <h4>支付宝SDK使用说明：</h4>
-                        <p>用于实现<strong>支付宝支付</strong>功能：</p>
-                        <ul>
-                                <li><strong>支付宝支付</strong>：支持使用支付宝完成交易支付</li>
-                                <li><strong>收集信息</strong>：设备标识符、网络状态、支付宝用户ID、交易信息</li>
-                        </ul>
-
-                        <div class="highlight">
-                                <p><strong>支付安全提示：</strong>所有支付操作均通过微信和支付宝官方SDK完成，我们不会收集或存储您的支付密码等敏感信息。支付过程中的个人信息处理受微信和支付宝的隐私政策约束。
-                                </p>
-                        </div>
-                        <h4>穿山甲SDK使用说明：</h4>
-                        <h3>广告相关SDK说明</h3>
-                        <p>为向您提供免费的内容和服务，我们接入了穿山甲（Pangle）SDK用于展示广告：</p>
-                        <h4>穿山甲（Pangle）SDK使用说明：</h4>
-                        <p>用于实现<strong>个性化广告推荐</strong>和<strong>广告交互</strong>功能：</p>
-                        <ul>
-                                <li><strong>广告展示</strong>：在应用内向您展示可能感兴趣的广告内容。</li>
-                                <li><strong>广告监测</strong>：监测广告的展示和点击数据，用于优化广告服务。</li>
-                                <li><strong>收集信息</strong>：设备标识符（如OAID、IMEI）、设备型号、操作系统版本、网络信息、IP地址、粗略位置信息、应用使用情况等。</li>
-                        </ul>
-                        <p>这些信息用于分析广告投放效果、匹配个性化广告以及防范欺诈等安全活动。您可以在应用内或通过设备系统设置管理您的广告偏好。</p>
-                        <p>如果您希望限制个性化广告推荐，可以通过以下方式操作：</p>
-                        <ul>
-                                <li><strong>穿山甲SDK个性化广告关闭</strong>：在广告展示页面点击"广告偏好设置"</li>
-                                <li><strong>设备级广告标识重置</strong>：在手机系统设置中重置广告标识符</li>
-                        </ul>
-                        <p>关闭个性化广告后，您仍然会看到广告，但广告的相关性可能会降低。</p>
-                        <h3>7.2 第三方SDK使用目的与收集信息详情</h3>
-                        <table>
-                                <tr>
-                                        <th>SDK名称</th>
-                                        <th>使用目的</th>
-                                        <th>收集信息</th>
-                                        <th>隐私政策链接</th>
-                                </tr>
-                                <tr>
-                                        <td>杰峰云SDK</td>
-                                        <td>摄像头连接、视频流播放、蓝牙设备配对</td>
-                                        <td>摄像头设备信息、视频流数据、蓝牙权限、设备标识符、网络信息、位置信息(用于蓝牙扫描)</td>
-                                        <td>https://docs.jftech.com/docs?menusId=ab0ed73834f54368be3e375075e27fb2&siderId=277cd49ce0154edc85d6414177c0ab79&lang=zh
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>微信SDK</td>
-                                        <td>微信登录、微信支付</td>
-                                        <td>设备信息(IMEI、Android ID、MAC地址)、网络信息、微信账号信息、交易信息</td>
-                                        <td>https://support.weixin.qq.com/cgi-bin/mmsupportacctnodeweb-bin/pages/RYiYJkLOrQwu0nb8
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>支付宝SDK</td>
-                                        <td>支付宝支付</td>
-                                        <td>设备信息(IMEI、Android ID)、网络信息、交易信息、支付宝账号信息</td>
-                                        <td>https://opendocs.alipay.com/open/54/01g6qm</td>
-                                </tr>
-                                <tr>
-                                        <td>穿山甲SDK</td>
-                                        <td>广告投放</td>
-                                        <td>设备标识符（IMEI、Android ID、OAID、IMSI等）、设备信息、位置信息、软件列表等</td>
-                                        <td>https://www.csjplatform.com/privacy</td>
-                                </tr>
-                        </table>
-
-                        <div class="warning">
-                                <p><strong>特别说明：</strong>我们会对授权合作伙伴获取有关信息的应用程序接口（API）、软件工具开发包（SDK）进行严格的安全检测，并与授权合作伙伴约定严格的数据保护措施，令其按照我们的委托目的、服务说明、本隐私权政策以及其他任何相关的保密和安全措施来处理个人信息。
-                                </p>
-                        </div>
-                        <h3>7.3 第三方SDK后台运行详细说明</h3>
-                        <p>根据相关法律法规要求，我们明确告知以下第三方SDK在静默状态或后台运行时的数据收集行为：</p>
-
-                        <h4>穿山甲SDK后台运行行为</h4>
-                        <ul>
-                                <li><strong>收集时机</strong>：应用处于后台时定时收集</li>
-                                <li><strong>收集信息</strong>：设备标识符(IMEI、OAID)、软件安装列表、广告交互数据</li>
-                                <li><strong>收集目的</strong>：广告效果归因、反作弊检测、用户画像更新</li>
-                                <li><strong>收集频率</strong>：每6小时收集一次</li>
-                        </ul>
-
-                        <h4>微信SDK后台运行行为</h4>
-                        <ul>
-                                <li><strong>收集时机</strong>：支付状态验证时收集</li>
-                                <li><strong>收集信息</strong>：设备信息、交易状态信息</li>
-                                <li><strong>收集目的</strong>：支付安全验证、交易状态同步</li>
-                                <li><strong>收集频率</strong>：按支付事件触发</li>
-                        </ul>
-
-                        <h4>杰峰云SDK后台运行行为</h4>
-                        <ul>
-                                <li><strong>收集时机</strong>：维持设备连接状态时收集</li>
-                                <li><strong>收集信息</strong>：设备网络状态、连接心跳数据</li>
-                                <li><strong>收集目的</strong>：维持摄像头设备连接、状态同步</li>
-                                <li><strong>收集频率</strong>：每30秒心跳检测一次</li>
-                        </ul>
-
-                </div>
-
-                <div class="section">
-                        <h2>八、应用自启动和关联启动说明</h2>
-
-                        <h3>8.1 自启动说明</h3>
-                        <p>为确保本应用处于关闭或后台运行状态下可正常接收到应用发送的广播信息，本应用须使用（自启动）能力，将存在一定频率通过系统发送广播唤醒本应用自启动或关联启动行为，是因实现功能及服务所必要的。
-                        </p>
-
-                        <div class="warning">
-                                <p><strong>后台运行数据收集说明：</strong>应用会在静默状态下或在后台运行时，收集IMEI、IMSI、设备MAC地址、Android
-                                        ID、OAID、MEID、ICCID、SN、SUCI、SUPI、DHCP、软件安装列表、位置、联系人、通话记录、日历、短信、本机电话号码、图片、音视频等个人信息。这些收集行为是为了：
-                                </p>
-                                <ul>
-                                        <li><strong>服务稳定性保障</strong>：监控应用性能，及时发现和修复崩溃问题</li>
-                                        <li><strong>反作弊和账号安全保护</strong>：识别异常设备行为，防止账号盗用和欺诈行为</li>
-                                        <li><strong>广告归因和效果分析</strong>：追踪广告投放效果，优化广告投放策略</li>
-                                        <li><strong>推送服务的正常运作</strong>：维持推送通道连接，确保及时接收消息</li>
-                                        <li><strong>用户体验优化</strong>：分析用户行为模式，提供个性化服务</li>
-                                </ul>
-                                <p>我们已要求所有第三方SDK在后台运行时也遵循最小必要原则，仅收集实现其功能所必需的信息，并在其隐私政策中明确告知后台运行时的数据收集行为。</p>
-                        </div>
-                </div>
-
-                <div class="section">
-                        <h2>九、未成年人保护</h2>
-                        <p>我们非常重视对未成年人个人信息的保护。如果您是未成年人，请务必要求您的监护人仔细阅读本政策，并在征得您的监护人同意的前提下使用我们的服务或向我们提供信息。</p>
-                </div>
-
-                <div class="section">
-                        <h2>十、本政策如何更新</h2>
-                        <p>我们可能适时修订本政策内容。如该等变更会导致您在本政策项下权利的实质减损，我们将在变更生效前，通过在页面显著位置提示、向您发送电子邮件等方式通知您。</p>
-
-                        <p>若您不同意该等变更，可以停止使用我们的产品和服务，若您继续使用我们的产品或服务，即表示您同意受修订后的本政策约束。</p>
-                </div>
-
-                <div class="section">
-                        <h2>十一、其他</h2>
-                        <p>本隐私政策的签订、生效、履行、争议的解决均适用中华人民共和国法律。</p>
-                        <p>有关本协议的争议应通过友好协商解决，如果协商不成，该争议将提交公司所在地有管辖权的法院诉讼解决。</p>
-
-                        <h3>联系我们</h3>
-                        <p>如果您对本隐私政策有任何疑问、意见或建议，或者想要行使您的个人信息权利，您可以通过以下方式与我们联系：</p>
-                        <p>公司名称：南京千宏讯翔科技有限公司</p>
-                        <p>注册地址：南京市玄武区孝陵卫200号南京理工大学大学生创业孵化园</p>
-                        <p>联系邮箱：1482492539@qq.com</p>
-                        <p>我们将尽快审核所涉问题，并在验证您的用户身份后的15个工作日内予以回复。</p>
-                </div>
-
-                <footer>
-                        <p>© 2025 南京千宏讯翔科技有限公司 版权所有</p>
-                </footer>
-        </div>
-        <script>
-                // 安卓端特定优化脚本
-                document.addEventListener('DOMContentLoaded', function () {
-                        // 确保页面在安卓WebView中正确显示
-                        if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
-                                document.body.style.width = '100%';
-                                document.body.style.overflowX = 'hidden';
-
-                                // 防止缩放
-                                var viewport = document.querySelector('meta[name=viewport]');
-                                if (viewport) {
-                                        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-                                }
-                        }
-                });
-        </script>
+		<!-- 底部联系 -->
+		<div class="footer-note">
+			<p style="font-weight:600;">📬 联系邮箱：1482492539@qq.com （南京千宏讯翔科技有限公司）</p>
+			<p style="font-size:0.9rem; margin-top:0.3rem;">本隐私政策自发布生效，更新于2026年3月5日。请您定期关注。使用服务即代表您理解并同意全部条款。</p>
+		</div>
+	</div>
 </body>
 
 </html>

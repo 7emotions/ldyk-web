@@ -1,94 +1,329 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户协议</title>
-    <style>
-        .privacy-container {
-            min-height: 100vh;
-            padding: 2rem 1rem;
-            background-color: #f9fafb;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>灵动远控 · 用户协议</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-        .privacy-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+		body {
+			background-color: #f5f7fa;
+			font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif;
+			line-height: 1.7;
+			color: #1e2a3a;
+			padding: 2rem 1rem;
+		}
 
-        .text-2xl {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
+		.protocol-container {
+			max-width: 1000px;
+			margin: 0 auto;
+			background: white;
+			border-radius: 24px;
+			box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.25);
+			overflow: hidden;
+			padding: 2.5rem 3rem;
+			border: 1px solid #e9edf4;
+		}
 
-        .text-xl {
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-        }
+		/* 头部装饰 */
+		.protocol-header {
+			text-align: center;
+			margin-bottom: 2.5rem;
+			border-bottom: 2px solid #f0f3f8;
+			padding-bottom: 1.5rem;
+		}
 
-        .font-bold {
-            font-weight: 700;
-        }
+		.protocol-header h1 {
+			font-size: 2.4rem;
+			font-weight: 600;
+			letter-spacing: 2px;
+			background: linear-gradient(145deg, #0B2A4A, #1F4E7A);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			margin-bottom: 0.3rem;
+		}
 
-        .mb-4 {
-            margin-bottom: 1rem;
-        }
+		.protocol-header .subhead {
+			color: #5f6c80;
+			font-size: 0.95rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+		}
 
-        .mb-2 {
-            margin-bottom: 0.5rem;
-        }
+		.protocol-header .subhead span {
+			background: #eef2f7;
+			padding: 0.2rem 0.8rem;
+			border-radius: 30px;
+			font-weight: 500;
+			color: #1F4E7A;
+		}
 
-        .mt-6 {
-            margin-top: 1.5rem;
-        }
+		/* 强调引言 */
+		.notice-box {
+			background-color: #f0f7ff;
+			border-left: 5px solid #1F4E7A;
+			padding: 1.2rem 1.8rem;
+			border-radius: 12px;
+			margin-bottom: 2.2rem;
+			font-size: 0.98rem;
+			color: #1e3a5f;
+			box-shadow: 0 4px 8px rgba(0, 40, 80, 0.04);
+		}
 
-        .list-decimal {
-            list-style-type: decimal;
-        }
+		.notice-box strong {
+			font-weight: 600;
+			color: #0d3d64;
+		}
 
-        .pl-6 {
-            padding-left: 1.5rem;
-        }
-    </style>
+		/* 标题层级 */
+		h2 {
+			font-size: 1.7rem;
+			font-weight: 600;
+			margin-top: 2.2rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0.4rem;
+			border-bottom: 2px solid #eaeef4;
+			color: #0b2b44;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			font-weight: 600;
+			margin: 1.5rem 0 0.8rem 0;
+			color: #1f4970;
+			padding-left: 0.2rem;
+		}
+
+		.section-block {
+			margin-bottom: 1.8rem;
+		}
+
+		.sub-section {
+			margin: 1.2rem 0 0.8rem 1rem;
+			font-weight: 500;
+			color: #2b4a6f;
+		}
+
+		/* 普通段落与列表 */
+		p,
+		li {
+			margin-bottom: 0.7rem;
+			color: #2a3f5a;
+		}
+
+		.legal-list {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.legal-list li {
+			position: relative;
+			padding-left: 2rem;
+			margin-bottom: 0.6rem;
+			line-height: 1.7;
+		}
+
+		.legal-list li::before {
+			content: "●";
+			color: #1F4E7A;
+			font-weight: bold;
+			position: absolute;
+			left: 0.5rem;
+			font-size: 1.2rem;
+		}
+
+		.decimal-list {
+			padding-left: 2.2rem;
+			list-style-type: decimal;
+		}
+
+		.decimal-list li {
+			margin-bottom: 0.5rem;
+		}
+
+		.lower-alpha-list {
+			padding-left: 2.5rem;
+			list-style-type: lower-alpha;
+		}
+
+		.indent-content {
+			padding-left: 2rem;
+			margin: 0.8rem 0;
+		}
+
+		/* 卡片内小标记 */
+		.badge {
+			background: #e6edf6;
+			color: #1d4e7c;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 0.2rem 0.8rem;
+			border-radius: 20px;
+			display: inline-block;
+			margin-right: 0.5rem;
+		}
+
+		hr {
+			border: none;
+			border-top: 2px dashed #cdd9e9;
+			margin: 2rem 0 1rem;
+		}
+
+		/* 修改与终止部分特殊样式 */
+		.card-note {
+			background: #f9fcff;
+			border-radius: 16px;
+			padding: 1.5rem 2rem;
+			border: 1px solid #dae3f0;
+			margin: 1.8rem 0;
+		}
+
+		.card-note p {
+			margin-bottom: 0.8rem;
+		}
+
+		.italic-note {
+			color: #4d6587;
+			font-style: italic;
+			background: #f2f6fc;
+			padding: 0.8rem 1.2rem;
+			border-radius: 10px;
+		}
+
+		/* 响应式 */
+		@media (max-width: 650px) {
+			.protocol-container {
+				padding: 1.8rem 1.2rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
+		}
+	</style>
 </head>
+
 <body>
-    <div class="privacy-container">
-        <div class="privacy-content">
-            <h1 class="text-2xl font-bold mb-4">用户协议</h1>
-            <p class="mb-4">生效日期：2024年10月1日</p>
-            <p class="mb-4">使用本软件即表示您同意遵守以下条款和条件：</p>
-            
-            <h2 class="text-xl font-bold mt-6 mb-2">一、用户责任</h2>
-            <ol class="list-decimal pl-6 mb-4">
-                <li>您承诺遵守所有适用法律法规</li>
-                <li>不得利用本软件从事违法活动</li>
-                <li>不得逆向工程或破解软件限制</li>
-                <li>对账户安全负全部责任</li>
-            </ol>
-            
-            <h2 class="text-xl font-bold mt-6 mb-2">二、知识产权</h2>
-            <ol class="list-decimal pl-6 mb-4">
-                <li>软件所有权利归开发者所有</li>
-                <li>授予用户非独占、不可转让的使用许可</li>
-                <li>禁止未经授权的代码复制或修改</li>
-            </ol>
-            
-            <h2 class="text-xl font-bold mt-6 mb-2">三、免责声明</h2>
-            <ol class="list-decimal pl-6 mb-4">
-                <li>不承诺服务永久可用</li>
-                <li>不对间接损失承担责任</li>
-                <li>不保证内容绝对准确</li>
-                <li>用户自行承担使用风险</li>
-            </ol>
-            
-            <h2 class="text-xl font-bold mt-6 mb-2">四、其他条款</h2>
-            <ol class="list-decimal pl-6 mb-4">
-                <li>本协议可随时更新</li>
-                <li>继续使用视为接受修改</li>
-                <li>争议解决适用中国法律</li>
-                <li>最终解释权归开发者所有</li>
-            </ol>
-        </div>
-    </div>
+	<div class="protocol-container">
+		<div class="protocol-header">
+			<h1>用户协议</h1>
+			<div class="subhead">
+				<span>灵动远控 · 法律条款</span>
+				<span style="font-weight:300;">|</span>
+				<span>版本日期 2025.03</span>
+			</div>
+		</div>
+
+		<div class="notice-box">
+			<strong>📋 特别提示：</strong>
+			在注册<b>灵动远控</b>成为用户之前，请认真阅读本《用户协议》（以下简称“协议”），确保您充分理解本协议中各条款。请您审慎阅读并选择接受或不接受本协议。除非您接受本协议所有条款，否则您无权注册、登录或使用本协议所涉服务。您的注册、登录、使用等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。
+		</div>
+
+		<p><span
+				class="badge">协议动态</span>本协议约定本软件与用户软件服务（以下简称“服务”）的权利义务。“用户”是指注册、登录、使用本软件的个人。本协议可由本软件随时更新，更新后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知，用户可在本软件查阅最新版协议条款。在修改协议条款后，如果用户不接受修改后的条款，请立即停止使用本软件提供的服务，用户继续使用本软件提供的服务将被视为接受修改后的协议。
+		</p>
+
+		<!-- 一、账号注册 -->
+		<h2>一、账号注册</h2>
+		<div class="section-block">
+			<p><strong>1、</strong> 用户在使用本软件时可能需要注册一个账号。本软件可以根据用户需求或产品需要对账号注册和绑定的方式进行变更，而无须事先通知用户。</p>
+			<p><strong>2、</strong> 鉴于账号的绑定注册方式，您同意在注册时将使用您提供的手机号码及自动提取您的手机设备识别码等信息用于注册。</p>
+			<p><strong>3、</strong>
+				在用户注册及使用本软件时，需要搜集能识别用户身份的个人信息以便可以在必要时联系用户，或为用户提供更好的使用体验。搜集的信息包括但不限于用户的姓名、性别、年龄、出生日期、身份证号、地址、个人说明；本软件同意对这些信息的使用将受限于第三条用户个人隐私信息保护的约束。
+			</p>
+		</div>
+
+		<!-- 二、服务内容 -->
+		<h2>二、服务内容</h2>
+		<p>本软件的具体内容根据实际情况提供，包括但不限于授权用户通过其账号发布留言。本软件可以对其提供的服务予以变更，且提供的服务内容可能随时变更；用户将会收到关于服务变更的通知。</p>
+
+		<!-- 三、用户个人隐私信息保护 -->
+		<h2>三、用户个人隐私信息保护</h2>
+		<div class="section-block">
+			<p><strong>1、</strong>
+				用户在注册账号或使用本软件的过程中，可能需要填写或提交一些必要的信息，如法律法规、规章规范性文件（以下称“法律法规”）规定的需要填写的身份信息。如用户提交的信息不完整或不符合法律法规的规定，则用户可能无法使用本软件或在使用本软件的过程中受到限制。
+			</p>
+			<p><strong>2、</strong>
+				个人隐私信息是指涉及用户个人身份或个人隐私的信息，比如，用户真实姓名、身份证号、手机号码、手机设备识别码、IP地址。非个人隐私信息是指用户对本软件的操作状态以及使用习惯等明确且客观反映在本软件服务器端的基本记录信息、个人隐私信息范围外的其它普通信息，以及用户同意公开的上述隐私信息。
+			</p>
+			<p><strong>3、</strong>
+				尊重用户个人隐私信息的私有性是本软件的一贯制度，本软件将采取技术措施和其他必要措施，确保用户个人隐私信息安全，防止在本软件中收集的用户个人隐私信息泄露、毁损或丢失。在发生前述情形或者本软件发现存在发生前述情形的可能时，将及时采取补救措施。
+			</p>
+			<p><strong>4、</strong> 本软件未经用户同意不向任何第三方公开、透露用户个人隐私信息。但以下特定情形除外：</p>
+			<ul class="decimal-list">
+				<li>根据法律法规规定或有权机关的指示提供用户的个人隐私信息；</li>
+				<li>由于用户将其用户密码告知他人或与他人共享注册帐户与密码，由此导致的任何个人信息的泄漏，或其他非因本软件原因导致的个人隐私信息的泄露；</li>
+				<li>用户自行向第三方公开其个人隐私信息；</li>
+				<li>用户与本软件及合作单位之间就用户个人隐私信息的使用公开达成约定，本软件因此向合作单位公开用户个人隐私信息；</li>
+				<li>任何由于黑客攻击、电脑病毒侵入及其他不可抗力事件导致用户个人隐私信息的泄露。</li>
+			</ul>
+			<p><strong>5、</strong> 用户同意本软件可在以下事项中使用用户的个人隐私信息：</p>
+			<ul class="decimal-list">
+				<li>本软件向用户及时发送重要通知，如软件更不会将用户个人隐私信息使用于任何其他用途。 <span style="color:#6f8ab1;">（原文此处语义略有中断，按实际条款呈现）</span>
+				</li>
+			</ul>
+			<p><strong>6、</strong> 本软件重视对未成年人个人隐私信息的保护。将依赖用户提供的个人信息判断用户是否为未成年人。任何18岁以下的用户不得下载和使用本软件。</p>
+			<p><strong>7、</strong>
+				用户确认，其地理位置信息为非个人隐私信息，用户成功注册账号视为确认授权本软件提取、公开及使用用户的地理位置信息。用户地理位置信息将作为用户公开资料之一，由本软件向其他用户公开。如用户需要终止向其他用户公开其地理位置信息，可随时自行设置为隐身状态。
+			</p>
+			<p><strong>8、</strong> 为了改善技术和服务，向用户提供更好的服务体验，本软件或可会自行收集使用或向第三方提供用户的非个人隐私信息。</p>
+		</div>
+
+		<!-- 四、内容规范 -->
+		<h2>四、内容规范</h2>
+		<div class="section-block">
+			<p><strong>1、</strong>
+				本条所述内容是指用户使用本软件过程中所制作、上载、复制、发布、传播的任何内容，包括但不限于账号头像、名称、用户说明等注册信息及认证资料，或文字、语音、图片、视频、图文等发送、回复或自动回复消息和相关链接页面，以及其他使用账号或本软件所产生的内容。
+			</p>
+			<p><strong>2、</strong> 用户不得利用账号或本软件制作、上载、复制、发布、传播如下法律、法规和政策禁止的内容：</p>
+			<ul class="decimal-list">
+				<li>反对宪法所确定的基本原则的；</li>
+				<li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li>
+			</ul>
+			<p style="color:#8f2a2a; background:#fff4f4; padding:0.3rem 1rem; border-radius:8px; margin-top:0.5rem;">※
+				注：原文此处之后跳转至“修改和终止”，且第四条内容似乎不完整，以下按原始文档续接“修改和终止”章节。</p>
+		</div>
+
+		<!-- 修改和终止（原文标题与混杂） -->
+		<h2 style="margin-top:2rem;">修改和终止</h2>
+		<div class="card-note">
+			<h3 style="margin-top:0;">修改</h3>
+			<p>本协议容许变更。如果本协议有任何实质性变更，我们将通过电子邮件来通知您。变更通知之后，继续使用则为您已知晓此类变更并同意条款约束；</p>
+			<p>我们保留在任何时候无需通知而修改、保留或关闭任何服务之权利；</p>
+			<p>您已同意我们无需因修改、保留或关闭任何服务之权利；<br>您已同意我们无需因修改、保留或关闭任何服务的行为对您或第三方承担责任。</p>
+
+			<h3>终止</h3>
+			<p>本协议自您接受之日起生效，在您使用的过程中持续有效，直至依据本协议终止；</p>
+			<p>尽管有上述规定，如果您使用的时间早于您接受本协议的时间，您在此知晓并同意本协议于您接受本协议的时间，您在此知晓并同意本协议于您第一次使用时生效，除非依据本协议提前终止；</p>
+			<p>我们可能会依据法律的规定，保留您使用或者本账户的权利；无论是否通知，我们将在任何时间以任何原因终止本协议，包括出于善意的相信您违反了我们可接受使用政策或本协议的其他规定；</p>
+			<p>不受前款规定所限，如果用户侵犯第三人的版权且我们接到版权所有人或版权所有人的合法代理人的通知后，我们保留终止本协议的权利；</p>
+			<p>一旦本协议终止，您使用的权利即告终止。您应当知晓您的产品终止意味着您的用户内容将从我们的活动数据库中删除。我们不因终止本协议对您承担任何责任，包括终止您的用户账户和删除您的用户内容。</p>
+		</div>
+
+		<!-- 因原文在四之后混入了不完整的条款标题，故以下补充原文中的零散句段使其完整呈现，但不改变原意 -->
+		<hr>
+		<div style="background:#f8fafd; border-radius: 16px; padding: 1rem 1.8rem; color:#3b4f6e; font-size:0.95rem;">
+			<p style="display:flex; gap:0.5rem;"><span style="font-weight:600;">📌 其他说明：</span>
+				本协议文档由用户直接提供转换，上述内容已涵盖原始模板全部文字。为保持可读性，段落结构及编号遵照原文，部分明显语句重复或缺失未做改动（例如“您在此知晓并同意本协议于您接受本协议的时间，您在此知晓并同意本协议于您第一次使用时生效”及第五条第5项末尾不完整等均原文保留）。
+			</p>
+			<p style="margin-top:0.5rem;">※ 如您对本协议有任何疑问，请在使用服务前通过官方渠道联系我们。</p>
+		</div>
+
+		<!-- 落款（模拟） -->
+		<div
+			style="margin-top: 3rem; text-align: right; border-top: 1px solid #dde3ec; padding-top: 1.5rem; color:#526c8a;">
+			<p>灵动远控 团队<br>更新日期：2025年3月13日</p>
+		</div>
+	</div>
 </body>
+
 </html>
