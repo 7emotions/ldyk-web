@@ -32,7 +32,7 @@ const handleDownload = () => {
     alert("敬请期待");
     window.location.href = '';
   } else {
-    var apkUrl = 'http://api.ldyuankong.cn/app-api/system/app-version/download';
+    var apkUrl = 'https://api.qianhong.shop/app-api/system/app-version/download';
 
     var link = document.createElement('a');
     link.href = apkUrl;
